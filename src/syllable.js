@@ -35,9 +35,16 @@ export function syllables(word) {
   } 
 
 export function arrayCycling(arr){
+  let count = 0;
   for (let i= 0; i <arr.length; i++){
-    if (syllables(arr[i]) !==5) {
+    if (syllables(arr[i]) > 5) {
       return false;
+    // } else if (syllables(arr[i]) < 5) {
+    //   count += arr[i];
+    // } else if (count > 5){
+    //   return false;
+    // } else if (count === 5){
+    //   return true;
     }
   }
 }

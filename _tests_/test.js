@@ -32,7 +32,7 @@ describe('syllables', () => {
 
 describe('arrayCycling', () => {
   test('should verify that each line has the appropriate number of syllables', () => {
-    let array = ["one", "towel", "dog"];
+    let array = ["hippopotakenisuaeke"];
   expect(arrayCycling(array)).toEqual(false);
   });
 });
