@@ -18,12 +18,15 @@ This is an application for the game Sudoku fill the rows, columns and squares wi
 
 ## Specs
 
-| Behavior | Input | Output |
-|----------|-------|--------|
-| User inputs only allows letters | 7, a | false, true |
-| Rows of 1x9 contain values 1-9 with no repeat values | 1,4,2,7,3,8,4,6,9 | True |
-| Columns or 9x1 contain values 1-9 with no repeat values | 9,4,2,7,3,8,4,6,1 | True |
-| User fills 3x3 grid with values 1-9, with no repeat values | No repeat values | True |
+Behavior 1 : refuse anything but alphabetical characters, with the exception of an apostraphy.
+Input: !@#
+Output: Please enter word or series of words.
+
+Behavior 2 : Split string of words into an array.
+Input: "One day I walked the dog"
+Output: inputArray = ["One", "day", "I", "walked", "the", "dog"]
+
+
 
 ## Known Bugs
 
