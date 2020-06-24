@@ -39,12 +39,13 @@ export function arrayCycling(arr){
   for (let i= 0; i <arr.length; i++){
     if (syllables(arr[i]) > 5) {
       return false;
-    // } else if (syllables(arr[i]) < 5) {
-    //   count += arr[i];
-    // } else if (count > 5){
-    //   return false;
-    // } else if (count === 5){
-    //   return true;
+    } else if (syllables(arr[i]) < 5) {
+      count += arr[i];
+      return true;
+    } else if (count > 5){
+      return false;
+    } else if (count === 5){
+      return true;
     }
   }
 }
