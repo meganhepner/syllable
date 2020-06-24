@@ -1,8 +1,8 @@
-# _{Sudoku}_
+# _{Syllable}_
 
-#### _{Sudoku brain game}, {6/23/2020}_
+#### _{syllable counting app}, {6/24/2020}_
 
-#### By  **Jerrod Styrk**,**Frederick Ernest**
+#### By  **Megan Hepner** **Frederick Ernest**
 
 ## Description
 
@@ -10,28 +10,28 @@ This is an application for the game Sudoku fill the rows, columns and squares wi
 
 ## Setup/Installation Requirements
 
-* _This is a great place_
-* _to list setup instructions_
-* _in a simple_
-* _easy-to-understand_
-* _format_
+* to use this content, first click the green clone button above and copy the link to your clipboard 
+* in your terminal run the command "git clone (GitHub url)" to clone the directory to your computer
+* you will need Node.js to run commands, go [here](https://nodejs.org/en/) to install the latest version
+* with Node.js installed, in your terminal (not in the node.js terminal) run the command npm install
+* after install open the files in your code editor
 
 ## Specs
 
 | Behavior | Input | Output |
 |----------|-------|--------|
-| User inputs only allows numbers | 7, a | true, NaN |
+| User inputs only allows letters | 7, a | false, true |
 | Rows of 1x9 contain values 1-9 with no repeat values | 1,4,2,7,3,8,4,6,9 | True |
 | Columns or 9x1 contain values 1-9 with no repeat values | 9,4,2,7,3,8,4,6,1 | True |
 | User fills 3x3 grid with values 1-9, with no repeat values | No repeat values | True |
 
 ## Known Bugs
 
-None known curretly
+_{No Known Bugs}_
 
 ## Support and contact details
 
-Contact us at jstyrk@citadel.edu
+Contact us at Megan Hepner @ megan.hepner@gmail.com and Frederick Ernest @ frederick.ernest@gmail.com
 
 ## Technologies Used
 
@@ -52,6 +52,6 @@ Contact us at jstyrk@citadel.edu
 * popper.js
 * bootstrap
 
-### License
+### Open source under the MIT licence.
 
-Copyright (c) 2016 **Jerrod Styrk**, **Frederick Ernest**
+Copyright (c) 2020 **Megan Hepner**, **Frederick Ernest**
