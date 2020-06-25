@@ -1,4 +1,4 @@
-import { allLetter, syllables, stringToArray, arrayCycling } from "./../src/syllable.js";
+import { allLetter, syllables, stringToArray, arrayCycling5 } from "./../src/syllable.js";
 
 describe('allLetter', () => {
 test('should return false if string includes characters that are not letters or apostrophes', () => {
@@ -30,10 +30,10 @@ describe('syllables', () => {
 //     });
 //   });
 
-describe('arrayCycling', () => {
+describe('arrayCycling5', () => {
   test('should verify that each line has the appropriate number of syllables', () => {
     let array = ["one, one, one, one, one"];
-  expect(arrayCycling(array)).toEqual(false);
+  expect(arrayCycling5(array)).toEqual(false);
   });
 });
 
