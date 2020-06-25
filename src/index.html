@@ -5,7 +5,30 @@
     <title>Syllable Counter</title>
   </head>
   <body>
-    <h1>Syllable Counter</h1>
+    <div class="container">
+      <h1>Syllable Counter</h1>
+      <form id="haiku">
+        <div class="form-group">
+          <label for="line1">Line 1</label>
+          <input type="text"  class="form-control" id="line1" required>
+        </div>
+        <div class="form-group">
+          <label for="line2">Line 2</label>
+          <input type="text"  class="form-control" id="line2" required>
+        </div>
+        <div class="form-group">
+          <label for="line3">Line 3</label>
+          <input type="text"  class="form-control" id="line3" required>
+        </div>
+        <button type="submit" class="btn btn-outline-dark">Submit Haiku!</button>
+      </form>
+      <div id="input">
+
+      </div>
+      <ul id="answer">
+        
+      </ul>
+    </div>
   </body>
   
 </html>
