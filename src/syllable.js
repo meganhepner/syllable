@@ -9,6 +9,14 @@ export function Haiku(line1, line2, line3) {
   return `{this.line1} {this.line2} {this.line3}`;
 }*/
 
+/*function numberOfWords(str) {
+  while (str.includes("  "))
+  {
+      str = str.replace("  ", " ");
+  }
+  return str.split(" ").length;
+}*/
+
 export function allLetter(input) {
   let letters = /^[A-Za-z']+$/;
   if (input.match(letters)) {
@@ -59,7 +67,6 @@ export function arrayCycling7(arr){
       return false;
     } else if (syllables(arr[i]) < 7) {
       count += syllables(arr[i]);
-      return true;
     } else if (count > 7){
       return false;
     } 
