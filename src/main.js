@@ -2,24 +2,33 @@ import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
 import $ from 'jquery';
-import { Haiku } from './../src/syllables.js';
-import { arrayCycling5 } from './syllable';
+import './syllable.js';
+import { Haiku, allLetter, arrayCycling5, arrayCycling7 } from './syllable.js';
 
 // UI Logic
 $(document).ready(function() {
   $("form#haiku").submit(function(event) {
     event.preventDefault();
-    const line1 = $("input#line1").val();
-    const line2 = $("input#line2").val();
-    const line3 = $("input#line3").val();
-    allLetter(line1);
-    allLetter(line2);
-    allLetter(line3);
-    arrayCycling5(line1);
-    arrayCycling5(line2);
-    arrayCycling5(line3);
+    let line1 = $("input#line1").val();
+    let line2 = $("input#line2").val();
+    let line3 = $("input#line3").val();
+    const arrayWordsLine1 = line1.split(" ");
+    const arrayWordsLine2 = line2.split(" ");
+    const arrayWordsLine3 = line3.split(" ");
+    arrayWordsLine1.forEach(function(element){
+      console.log(allLetter(element));
+    });
+    arrayWordsLine2.forEach(function(element){
+      console.log(allLetter(element));
+    });
+    arrayWordsLine3.forEach(function(element){
+      console.log(allLetter(element));
+    });
+    arrayCycling5(arrayWordsLine1);
+    arrayCycling7(arrayWordsLine2);
+    arrayCycling5(arrayWordsLine3);
 
     let poem = new Haiku(line1, line2, line3);
-    
+    console.log(poem.line1, poem.line2, poem.line3);   
   });
 });

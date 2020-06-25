@@ -1,4 +1,4 @@
-import { allLetter, syllables, stringToArray, arrayCycling5 } from "./../src/syllable.js";
+import { allLetter, syllables, arrayCycling5 } from "./../src/syllable.js";
 
 describe('allLetter', () => {
 test('should return false if string includes characters that are not letters or apostrophes', () => {
@@ -7,12 +7,12 @@ test('should return false if string includes characters that are not letters or 
   });
 });
 
-describe('stringToArray', () => {
-  test('should split string into an array', () => {
-    const input = ("a b c");
-    expect(stringToArray(input)).toEqual(["a", "b", "c"]); 
-    });
-  });
+// describe('stringToArray', () => {
+//   test('should split string into an array', () => {
+//     const input = ("a b c");
+//     expect(stringToArray(input)).toEqual(["a", "b", "c"]); 
+//     });
+//   });
 
 describe('syllables', () => {
   test('should split each word into syllables', () => {
@@ -32,8 +32,10 @@ describe('syllables', () => {
 
 describe('arrayCycling5', () => {
   test('should verify that each line has the appropriate number of syllables', () => {
-    let array = ["one, one, one, one, one"];
-  expect(arrayCycling5(array)).toEqual(false);
+    let array1 = ["one", "one", "one", "one", "one"];
+    let array2 = ["i", "love", "wowo", "wowo"];
+    expect(arrayCycling5(array1)).toEqual(true);
+    expect(arrayCycling5(array2)).toEqual(false);
   });
 });
 

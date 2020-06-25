@@ -1,13 +1,8 @@
 
-export class Haiku {
-  constuctor(line1, line2, line3){
+export function Haiku(line1, line2, line3) {
     this.line1 = line1;
     this.line2 = line2;
     this.line3 = line3;
-  }
-  addLines(userInputArray) {
-    this.lines.push(haiku);
-  }
 }
 
 /*createHaiku() {
@@ -24,10 +19,10 @@ export function allLetter(input) {
   }
 }
 
-export function stringToArray(input) {
-  const wordArray = input.split(" "); //
-  return wordArray;
-}
+// export function stringToArray(input) {
+//   const wordArray = input.split(" "); //
+//   return wordArray;
+// }
 
 export function syllables(word) {
   word = word.toLowerCase();
@@ -45,13 +40,15 @@ export function arrayCycling5(arr){
     if (syllables(arr[i]) > 5) {
       return false;
     } else if (syllables(arr[i]) < 5) {
-      count += arr[i];
-      return true;
-    } else if (count > 5){
+      count += syllables(arr[i]);
+    } else if (count > 5) {
       return false;
-    } else if (count === 5){
-      return true;
-    }
+    } 
+  }
+  if(count === 5) {
+    return arr;
+  } else {
+    return false;
   }
 }
 
@@ -61,13 +58,16 @@ export function arrayCycling7(arr){
     if (syllables(arr[i]) > 7) {
       return false;
     } else if (syllables(arr[i]) < 7) {
-      count += arr[i];
+      count += syllables(arr[i]);
       return true;
     } else if (count > 7){
       return false;
-    } else if (count === 7){
-      return true;
-    }
+    } 
+  }
+  if(count === 7) {
+    return arr;
+  } else {
+    return false;
   }
 }
 
