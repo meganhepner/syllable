@@ -1,21 +1,8 @@
-
 export function Haiku(line1, line2, line3) {
     this.line1 = line1;
     this.line2 = line2;
     this.line3 = line3;
 }
-
-/*createHaiku() {
-  return `{this.line1} {this.line2} {this.line3}`;
-}*/
-
-/*function numberOfWords(str) {
-  while (str.includes("  "))
-  {
-      str = str.replace("  ", " ");
-  }
-  return str.split(" ").length;
-}*/
 
 export function allLetter(input) {
   let letters = /^[A-Za-z']+$/;
@@ -26,11 +13,6 @@ export function allLetter(input) {
     return false;
   }
 }
-
-// export function stringToArray(input) {
-//   const wordArray = input.split(" "); //
-//   return wordArray;
-// }
 
 export function syllables(word) {
   word = word.toLowerCase();
@@ -77,12 +59,3 @@ export function arrayCycling7(arr){
     return false;
   }
 }
-
-
-// export function haikuTest(line1, line2, line3) {
-//   if (line1 !== 5 || line2 !== 7 || line3 !== 5){
-//     return false;
-//   } else {
-//     return true;
-//   }
-// }
