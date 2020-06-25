@@ -35,11 +35,11 @@ $(document).ready(function() {
       }
     }
     if (arrayCycling5(arrayWordsLine1) && arrayCycling7(arrayWordsLine2) && arrayCycling5(arrayWordsLine3)) {
-      $("div#answer").append(poem.line1);
-      $("div#answer").append(poem.line2);
-      $("div#answer").append(poem.line3);
+      $("ul#answer").append("<li>"+poem.line1+"</li>");
+      $("ul#answer").append("<li>"+poem.line2+"</li>");
+      $("ul#answer").append("<li>"+poem.line3+"</li>");
     } else {
-      $("div#answer").text("This is not a Haiku poem");
+      $("div#input").text("This is not a Haiku poem");
     }
   });
 });
