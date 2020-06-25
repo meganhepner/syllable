@@ -46,7 +46,7 @@ export function arrayCycling5(arr){
     } 
   }
   if(count === 5) {
-    return arr;
+    return true;
   } else {
     return false;
   }
@@ -65,7 +65,7 @@ export function arrayCycling7(arr){
     } 
   }
   if(count === 7) {
-    return arr;
+    return true;
   } else {
     return false;
   }

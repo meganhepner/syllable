@@ -12,23 +12,34 @@ $(document).ready(function() {
     let line1 = $("input#line1").val();
     let line2 = $("input#line2").val();
     let line3 = $("input#line3").val();
-    const arrayWordsLine1 = line1.split(" ");
-    const arrayWordsLine2 = line2.split(" ");
-    const arrayWordsLine3 = line3.split(" ");
-    arrayWordsLine1.forEach(function(element){
-      console.log(allLetter(element));
-    });
-    arrayWordsLine2.forEach(function(element){
-      console.log(allLetter(element));
-    });
-    arrayWordsLine3.forEach(function(element){
-      console.log(allLetter(element));
-    });
-    arrayCycling5(arrayWordsLine1);
-    arrayCycling7(arrayWordsLine2);
-    arrayCycling5(arrayWordsLine3);
-
-    let poem = new Haiku(line1, line2, line3);
-    console.log(poem.line1, poem.line2, poem.line3);   
+    let arrayWordsLine1 = line1.split(" ");
+    let arrayWordsLine2 = line2.split(" ");
+    let arrayWordsLine3 = line3.split(" ");
+    let poem = new Haiku(line1, line2, line3); 
+    for(let i = 0; i< arrayWordsLine1.length; i++) {
+      if(!allLetter(arrayWordsLine1[i])) {
+        $("div#input").text("Input should only contains letters");
+        return;
+      }
+    }
+    for(let i = 0; i< arrayWordsLine2.length; i++) {
+      if(!allLetter(arrayWordsLine2[i])) {
+        $("div#input").text("Input should only contains letters");
+        return;
+      }
+    }
+    for(let i = 0; i< arrayWordsLine3.length; i++) {
+      if(!allLetter(arrayWordsLine3[i])) {
+        $("div#input").text("Input should only contains letters");
+        return;
+      }
+    }
+    if (arrayCycling5(arrayWordsLine1) && arrayCycling7(arrayWordsLine2) && arrayCycling5(arrayWordsLine3)) {
+      $("div#answer").append(poem.line1);
+      $("div#answer").append(poem.line2);
+      $("div#answer").append(poem.line3);
+    } else {
+      $("div#answer").text("This is not a Haiku poem");
+    }
   });
 });
